@@ -1,0 +1,24 @@
+---
+title: "pa_2"
+author: "Jorge VM"
+date: "2024-03-18"
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+```
+```{r}
+data <- read_csv("data/data.csv")
+```
+```{r}
+dat <-data |>
+  separate(info, into = c("word", "stress"), sep = "_")
+```
+```{r}
+means <- dat|>
+  group_by(stress)|>
+  summarise(dur = mean(durationV), f0 = mean(f0), int = mean(int))
+```
+
+

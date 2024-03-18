@@ -1,7 +1,7 @@
 # Set path to folder where files are
 
 
-path$ = "../stim/segmented"
+path$ = "../stim/segmented/"
 
 
 # Create output file and set header
